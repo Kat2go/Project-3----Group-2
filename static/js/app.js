@@ -1,8 +1,6 @@
 // Define the URL for your JSON data
 const url = "https://developer.nrel.gov/api/alt-fuel-stations/v1.json?limit=200&api_key=NFwYdHUM4ZpItnrfWegNs0sBSvdUplNebaTPO3RZ&fuel_type_code=ELECTRIC";
-limit=200
-api_key
-//mod 6
+
 let data;
 
 // Function to initialize the page
@@ -26,6 +24,13 @@ function init() {
         buildGaugeChart(firstSample); */
     });
 }
-
+for (var i = 0; i < stations.length; i++) {
+    var price = stations[i].ev_pricing;
+    if (price !== "NULL") {
+        // Do something with the non-NULL price here
+        // For example, you can log it to the console
+        console.log("Price is not NULL:", price);
+    }
+}
 // Initialize the page
 init();
