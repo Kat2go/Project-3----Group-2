@@ -42,7 +42,7 @@ function rankAndGroupStatesByStationCount(data) {
 
   // Calculate the number of states in each group
   const numStates = sortedStates.length;
-  const statesPerGroup = Math.ceil(numStates / 10);
+  const statesPerGroup = Math.ceil(numStates / 6);
 
   // Create a ranking and grouping object
   const stateRankingAndGrouping = {};
@@ -75,27 +75,6 @@ fetchData(url)
     console.error('An error occurred:', error);
   });
 
-/* // Function to rank states based on station counts
-function rankStatesByStationCount(data) {
-  const stationCounts = countStationsByState(data);
-
-  // Sort states by station count in descending order
-  const sortedStates = Object.keys(stationCounts).sort((a, b) => stationCounts[b] - stationCounts[a]);
-
-  // Create a ranking object
-  const stateRanking = {};
-
-  // Populate the ranking object with each state's rank and fillKey
-  sortedStates.forEach((state, index) => {
-    stateRanking[state] = {
-      fillKey: "", // You can set the fillKey as needed
-      rank: index + 1,
-    };
-  });
-
-  return stateRanking;
-}
- */
 
 
 // Function to log station counts
@@ -105,6 +84,5 @@ function logStationCounts(stationCounts) {
   }
 }
 
-// Define the API URL
 
 

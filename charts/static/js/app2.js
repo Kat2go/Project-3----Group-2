@@ -25,7 +25,7 @@ async function init() {
 // Populate the state dropdown  
     populateStateDropdown();
     //console.log("Dropdown:", d3.select("#selDataset")); // Log the dropdown
-    const defaultState = "AK"
+    const defaultState = "CA"
     topFacilityTypes = findTopFacilityTypes();
 
 // Build the initial charts
@@ -43,13 +43,26 @@ async function init() {
 }
 
 
-// Function to populate the state dropdown
+/* // Function to populate the state dropdown
 function populateStateDropdown() {
     let dropdown = d3.select("#selDataset");
     const uniqueStates = getUniqueStates(); // Helper function to get unique states
     uniqueStates.sort();
     uniqueStates.forEach((state) => {
         dropdown.append("option").text(state).property("value", state);
+    });
+} */
+// Function to populate the state dropdown
+function populateStateDropdown() {
+    let dropdown = d3.select("#selDataset");
+    const uniqueStates = getUniqueStates().filter(state => !["KA", "BC", "PR", null].includes(state)); // Filter unwanted states    
+    uniqueStates.sort();
+    uniqueStates.forEach((state) => {
+        const option = dropdown.append("option").text(state).property("value", state);
+        // Set "CA" as the default selected option
+        if (state === "CA") {
+            option.attr("selected", "selected");
+        }
     });
 }
 

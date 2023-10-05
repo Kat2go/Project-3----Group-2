@@ -11,14 +11,14 @@ var chargers = new Datamap({
   },
 
   fills: {
-  '1': '#CC4731',
-  '2': '#306596',
-  '3': '#667FAF',
-  '4': '#A9C0DE',
-  '5': '#CA5E5B',
-  '6': '#EAA9A8',
-  defaultFill: '#EDDC4E'
-},
+    '1': '#4CAF50',
+    '2': '#8BC34A',
+    '3': '#FFEB3B',
+    '4': '#FFC107',
+    '5': '#FF9800',
+    '6': '#FF5722',
+    defaultFill: '#EDDC4E'
+  },
 data:{
   "CA": {
       
