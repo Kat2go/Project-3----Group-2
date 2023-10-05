@@ -24,8 +24,8 @@
           <h5>Select a state: </h5>
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
-        
-      </div> 
+
+      </div>
       <div class="col-md-5">
         <div id="pie-chart"></div>
       </div>
@@ -42,8 +42,8 @@
 
  <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  <script src="static/js/app2.js"></script>
- <!-- <script type="module" src="./static/js/states.js"></script>--> 
+  <script src="{{ url_for('static', filename='js/app2.js') }}"></script>
+ <!-- <script type="module" src="./static/js/states.js"></script>-->
 
 </body>
 
